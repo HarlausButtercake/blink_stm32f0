@@ -1,10 +1,13 @@
-Src/main.o: ../Src/main.c ../Inc/stm32f0xx.h ../Inc/stm32f030x8.h \
- ../Inc/core_cm0.h ../Inc/cmsis_version.h ../Inc/cmsis_compiler.h \
- ../Inc/cmsis_gcc.h ../Inc/system_stm32f0xx.h
-../Inc/stm32f0xx.h:
-../Inc/stm32f030x8.h:
-../Inc/core_cm0.h:
-../Inc/cmsis_version.h:
-../Inc/cmsis_compiler.h:
-../Inc/cmsis_gcc.h:
-../Inc/system_stm32f0xx.h:
+Src/main.o: ../Src/main.c ../Header\ Files/stm32f0xx.h \
+ ../Header\ Files/stm32f030x8.h ../Header\ Files/core_cm0.h \
+ ../Header\ Files/cmsis_version.h ../Header\ Files/cmsis_compiler.h \
+ ../Header\ Files/cmsis_gcc.h ../Header\ Files/system_stm32f0xx.h \
+ ../Header\ Files/stm32f030x8.h
+../Header\ Files/stm32f0xx.h:
+../Header\ Files/stm32f030x8.h:
+../Header\ Files/core_cm0.h:
+../Header\ Files/cmsis_version.h:
+../Header\ Files/cmsis_compiler.h:
+../Header\ Files/cmsis_gcc.h:
+../Header\ Files/system_stm32f0xx.h:
+../Header\ Files/stm32f030x8.h:

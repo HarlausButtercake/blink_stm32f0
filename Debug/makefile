@@ -51,6 +51,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 blink_stm32f0.list \
 
+OBJCOPY_SREC += \
+blink_stm32f0.srec \
+
 
 # All Target
 all: main-build
@@ -74,12 +77,17 @@ blink_stm32f0.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+blink_stm32f0.srec: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O srec $(EXECUTABLES) "blink_stm32f0.srec"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) blink_stm32f0.elf blink_stm32f0.list blink_stm32f0.map default.size.stdout
+	-$(RM) blink_stm32f0.elf blink_stm32f0.list blink_stm32f0.map blink_stm32f0.srec default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_SREC)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

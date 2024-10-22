@@ -1,3 +1,6 @@
-../Src/main.c:28:5:main	16	static,ignoring_inline_asm
-../Src/main.c:44:6:Init_Clock	8	static
-../Src/main.c:59:6:Init_Pin	8	static
+../Header Files/core_cm0.h:623:22:__NVIC_EnableIRQ	16	static
+../Header Files/core_cm0.h:730:22:__NVIC_SetPriority	24	static
+../Src/main.c:21:5:main	8	static
+../Src/main.c:37:6:Init_Clock	8	static
+../Src/main.c:52:6:Init_Pin	8	static
+../Src/main.c:77:6:EXTI4_15_IRQHandler	8	static
